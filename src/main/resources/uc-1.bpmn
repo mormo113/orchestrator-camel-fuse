@@ -1,0 +1,857 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Definitions_1g90pwq" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Web Modeler" exporterVersion="1db7fd4" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.1.0" camunda:diagramRelationId="2232e44c-b31b-4f24-801c-ab4fdca2d4a9">
+  <bpmn:collaboration id="Collaboration_0vn8alx">
+    <bpmn:participant id="Participant_1yx3rnz" name="Use case 1" processRef="Process_07ljrhk" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_07ljrhk" isExecutable="true">
+    <bpmn:extensionElements>
+      <zeebe:userTaskForm id="userTaskForm_17lbi7g">{
+  "components": [
+    {
+      "label": "Catégorie du document N2",
+      "type": "textfield",
+      "id": "Field_1ga755f",
+      "key": "field_15guxgq"
+    },
+    {
+      "label": "Catégorie du document N3",
+      "type": "textfield",
+      "id": "Field_0jzh148",
+      "key": "field_0e3lucm"
+    },
+    {
+      "label": "Idun",
+      "type": "textfield",
+      "id": "Field_0iiap5g",
+      "key": "field_18asc15"
+    },
+    {
+      "label": "Nom",
+      "type": "textfield",
+      "id": "Field_03fgnrs",
+      "key": "field_0oqh6zb"
+    },
+    {
+      "label": "Prénom",
+      "type": "textfield",
+      "id": "Field_01pi61b",
+      "key": "field_0v6abnn"
+    },
+    {
+      "label": "Type de la pièce",
+      "type": "textfield",
+      "id": "Field_15g6okh",
+      "key": "field_0qg7hm0"
+    },
+    {
+      "label": "Numéro pièce d'identité",
+      "type": "textfield",
+      "id": "Field_02h6w2g",
+      "key": "field_1kzo6r4"
+    },
+    {
+      "label": "date d'émission pièce",
+      "type": "textfield",
+      "id": "Field_0uow9ng",
+      "key": "field_0lblz59"
+    },
+    {
+      "label": "date d'échéance pièce",
+      "type": "textfield",
+      "id": "Field_0q59ang",
+      "key": "field_05l9t12"
+    },
+    {
+      "label": "Notes",
+      "type": "textfield",
+      "id": "Field_0o0odsr",
+      "key": "field_0t0bdqd"
+    },
+    {
+      "label": "Ref message R-Net",
+      "type": "textfield",
+      "id": "Field_1s1n2t2",
+      "key": "field_03z2pgg"
+    },
+    {
+      "label": "Titre message R-Net",
+      "type": "textfield",
+      "id": "Field_0hhacan",
+      "key": "field_0h8nmvp"
+    }
+  ],
+  "type": "default",
+  "id": "Form_0ouoz84",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.0.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.0.0"
+  },
+  "schemaVersion": 4
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="userTaskForm_1h5ee8r">{
+  "components": [
+    {
+      "values": [
+        {
+          "label": "yes",
+          "value": "yes"
+        },
+        {
+          "label": "no",
+          "value": "no"
+        }
+      ],
+      "label": "validated by OMC?",
+      "type": "radio",
+      "id": "Field_00lkcea",
+      "key": "validated",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_05r4k12",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.0.0",
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "4137017"
+  },
+  "schemaVersion": 4
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="userTaskForm_331heha">{
+  "components": [
+    {
+      "values": [
+        {
+          "label": "oui",
+          "value": "true"
+        },
+        {
+          "label": "non",
+          "value": "false"
+        }
+      ],
+      "label": "document accepted?",
+      "type": "radio",
+      "id": "Field_0flokkh",
+      "key": "documentAccepted"
+    },
+    {
+      "values": [
+        {
+          "label": "oui",
+          "value": "true"
+        },
+        {
+          "label": "non",
+          "value": "false"
+        }
+      ],
+      "label": "is stored in GED?",
+      "type": "radio",
+      "id": "Field_1n1t0n1",
+      "key": "storeGed"
+    },
+    {
+      "action": "submit",
+      "label": "validate",
+      "type": "button",
+      "id": "Field_0tnvhbs",
+      "key": "field_0ljzic6"
+    }
+  ],
+  "type": "default",
+  "id": "Form_0wzuf96",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.0.0",
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "4137017"
+  },
+  "schemaVersion": 4
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="userTaskForm_2dp61nh">{
+  "components": [
+    {
+      "label": "Status",
+      "type": "textfield",
+      "id": "Field_132o3g8",
+      "key": "field_1d2zsik"
+    },
+    {
+      "values": [
+        {
+          "label": "oui",
+          "value": "true"
+        },
+        {
+          "label": "non",
+          "value": "false"
+        }
+      ],
+      "label": "document accepted?",
+      "type": "radio",
+      "id": "Field_0flokkh",
+      "key": "field_0ytf7q1"
+    },
+    {
+      "values": [
+        {
+          "label": "oui",
+          "value": "true"
+        },
+        {
+          "label": "non",
+          "value": "false"
+        }
+      ],
+      "label": "is stored in GED?",
+      "type": "radio",
+      "id": "Field_1n1t0n1",
+      "key": "field_1j5pnw5"
+    },
+    {
+      "action": "submit",
+      "label": "validate",
+      "type": "button",
+      "id": "Field_0tnvhbs",
+      "key": "field_0ljzic6"
+    }
+  ],
+  "type": "default",
+  "id": "Form_0wzuf96",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.0.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.0.0"
+  },
+  "schemaVersion": 4
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="userTaskForm_01b9b01">{
+  "components": [
+    {
+      "action": "submit",
+      "label": "store GED",
+      "type": "button",
+      "id": "Field_01tem29",
+      "key": "field_10pajjw"
+    }
+  ],
+  "type": "default",
+  "id": "Form_1jmab92",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.0.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.0.0"
+  },
+  "schemaVersion": 4
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="userTaskForm_202nmt4">{
+  "components": [
+    {
+      "action": "submit",
+      "label": "store GED",
+      "type": "button",
+      "id": "Field_01tem29",
+      "key": "field_10pajjw"
+    }
+  ],
+  "type": "default",
+  "id": "Form_1jmab92",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.0.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.0.0"
+  },
+  "schemaVersion": 4
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="UserTaskForm_1d2u5bk">{
+  "components": [
+    {
+      "values": [
+        {
+          "label": "oui",
+          "value": "true"
+        },
+        {
+          "label": "non",
+          "value": "false"
+        }
+      ],
+      "label": "document accepted?",
+      "type": "radio",
+      "id": "Field_0flokkh",
+      "key": "documentAccepted"
+    },
+    {
+      "values": [
+        {
+          "label": "oui",
+          "value": "true"
+        },
+        {
+          "label": "non",
+          "value": "false"
+        }
+      ],
+      "label": "is stored in GED?",
+      "type": "radio",
+      "id": "Field_1n1t0n1",
+      "key": "storeGed"
+    },
+    {
+      "action": "submit",
+      "label": "validate",
+      "type": "button",
+      "id": "Field_0tnvhbs",
+      "key": "field_0ljzic6"
+    }
+  ],
+  "type": "default",
+  "id": "Form_0wzuf96",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.0.0",
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "4137017"
+  },
+  "schemaVersion": 4
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="userTaskForm_2e9et22">{
+  "components": [
+    {
+      "label": "message",
+      "type": "textfield",
+      "id": "Field_02qsi43",
+      "key": "message"
+    },
+    {
+      "action": "submit",
+      "label": "send message",
+      "type": "button",
+      "id": "Field_1892xu8",
+      "key": "field_0sx7jkf"
+    }
+  ],
+  "schemaVersion": 4,
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "4137017"
+  },
+  "type": "default",
+  "id": "Form_0a952ea7-f2c7-4559-982b-36b820833623",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "1.3"
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="userTaskForm_20tmf94">{
+  "components": [
+    {
+      "label": "message",
+      "type": "textfield",
+      "id": "Field_02qsi43",
+      "key": "message"
+    },
+    {
+      "action": "submit",
+      "label": "send message",
+      "type": "button",
+      "id": "Field_1892xu8",
+      "key": "field_0sx7jkf"
+    }
+  ],
+  "schemaVersion": 4,
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "4137017"
+  },
+  "type": "default",
+  "id": "Form_0a952ea7-f2c7-4559-982b-36b820833623",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "1.3"
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="userTaskForm_3qqvqsr">{
+  "components": [
+    {
+      "label": "message",
+      "type": "textfield",
+      "id": "Field_02qsi43",
+      "key": "message"
+    },
+    {
+      "action": "submit",
+      "label": "send message",
+      "type": "button",
+      "id": "Field_1892xu8",
+      "key": "field_0sx7jkf"
+    }
+  ],
+  "schemaVersion": 4,
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "4137017"
+  },
+  "type": "default",
+  "id": "Form_0a952ea7-f2c7-4559-982b-36b820833623",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "1.3"
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="userTaskForm_11f0jm6">{
+  "components": [
+    {
+      "label": "message",
+      "type": "textfield",
+      "id": "Field_02qsi43",
+      "key": "message"
+    },
+    {
+      "action": "submit",
+      "label": "send message",
+      "type": "button",
+      "id": "Field_1892xu8",
+      "key": "field_0sx7jkf"
+    }
+  ],
+  "schemaVersion": 4,
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "4137017"
+  },
+  "type": "default",
+  "id": "Form_0a952ea7-f2c7-4559-982b-36b820833623",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "1.3"
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="userTaskForm_0n6hg84">{
+  "components": [
+    {
+      "label": "message",
+      "type": "textfield",
+      "id": "Field_02qsi43",
+      "key": "message"
+    },
+    {
+      "action": "submit",
+      "label": "send message",
+      "type": "button",
+      "id": "Field_1892xu8",
+      "key": "field_0sx7jkf"
+    }
+  ],
+  "schemaVersion": 4,
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "4137017"
+  },
+  "type": "default",
+  "id": "Form_0a952ea7-f2c7-4559-982b-36b820833623",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "1.3"
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="userTaskForm_3mqff8s">{
+  "components": [
+    {
+      "label": "message",
+      "type": "textfield",
+      "id": "Field_02qsi43",
+      "key": "message"
+    },
+    {
+      "action": "submit",
+      "label": "send message",
+      "type": "button",
+      "id": "Field_1892xu8",
+      "key": "field_0sx7jkf"
+    }
+  ],
+  "schemaVersion": 4,
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "4137017"
+  },
+  "type": "default",
+  "id": "Form_0a952ea7-f2c7-4559-982b-36b820833623",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "1.3"
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="userTaskForm_1q4g8r5">{
+  "components": [
+    {
+      "action": "submit",
+      "label": "save document",
+      "type": "button",
+      "id": "Field_0bg6j4o",
+      "key": "field_15t5mq8"
+    }
+  ],
+  "schemaVersion": 4,
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "4137017"
+  },
+  "type": "default",
+  "id": "Form_c3aece0e-0896-4c16-a282-b0728c1e54b5",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "1.3"
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="userTaskForm_1ireren">{
+  "components": [
+    {
+      "action": "submit",
+      "label": "save document",
+      "type": "button",
+      "id": "Field_0bg6j4o",
+      "key": "field_15t5mq8"
+    }
+  ],
+  "schemaVersion": 4,
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "4137017"
+  },
+  "type": "default",
+  "id": "Form_c3aece0e-0896-4c16-a282-b0728c1e54b5",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "1.3"
+}</zeebe:userTaskForm>
+    </bpmn:extensionElements>
+    <bpmn:laneSet id="LaneSet_0oqh2fl">
+      <bpmn:lane id="Lane_0783trx" name="Agent BR">
+        <bpmn:flowNodeRef>StartEvent_1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_0a2ad76</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_13ogzsu</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_10ysvjt</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_007q12x" name="OMC">
+        <bpmn:flowNodeRef>Gateway_100yp67</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_0zc5r7d</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_0as4reb</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_1yzuh3c</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_1fpqzg4</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_0htz0fy</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_0xc4jnu</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_0kw3q1v</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_0k7q9gg</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_0889zwr</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="StartEvent_1" name="document received">
+      <bpmn:extensionElements>
+        <zeebe:ioMapping>
+          <zeebe:output source="=&#34;A_LIRE&#34;" target="status" />
+        </zeebe:ioMapping>
+      </bpmn:extensionElements>
+      <bpmn:outgoing>Flow_0uwoxkx</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_0uwoxkx" sourceRef="StartEvent_1" targetRef="Activity_10ysvjt" />
+    <bpmn:sequenceFlow id="Flow_1ya2t4t" sourceRef="Activity_10ysvjt" targetRef="Gateway_13ogzsu" />
+    <bpmn:sequenceFlow id="Flow_17mips3" name="no" sourceRef="Gateway_13ogzsu" targetRef="Activity_0a2ad76">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">= validated = "no"</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:userTask id="Activity_0a2ad76" name="validate document">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:userTaskForm_331heha" />
+        <zeebe:ioMapping>
+          <zeebe:output source="=documentAccepted" target="documentAccepted" />
+          <zeebe:output source="=status" target="status" />
+          <zeebe:output source="=name" target="name" />
+          <zeebe:output source="=documentType" target="documentType" />
+          <zeebe:output source="=storeGed" target="storeGed" />
+        </zeebe:ioMapping>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_17mips3</bpmn:incoming>
+      <bpmn:outgoing>Flow_1cahemv</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:exclusiveGateway id="Gateway_100yp67" name="document accepted?">
+      <bpmn:incoming>Flow_03nendz</bpmn:incoming>
+      <bpmn:incoming>Flow_1cahemv</bpmn:incoming>
+      <bpmn:outgoing>Flow_03aekpc</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1gkyk1a</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:endEvent id="Event_0zc5r7d" name="document rejected">
+      <bpmn:extensionElements>
+        <zeebe:ioMapping>
+          <zeebe:output source="=&#34;REJETE&#34;" target="status" />
+        </zeebe:ioMapping>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1ds01f5</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:exclusiveGateway id="Gateway_0as4reb" name="is stored in GED?">
+      <bpmn:incoming>Flow_03aekpc</bpmn:incoming>
+      <bpmn:outgoing>Flow_1q5scwv</bpmn:outgoing>
+      <bpmn:outgoing>Flow_17w2olw</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:endEvent id="Event_1yzuh3c" name="treated GED">
+      <bpmn:extensionElements>
+        <zeebe:ioMapping>
+          <zeebe:output source="=status" target="status" />
+        </zeebe:ioMapping>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1ef4d41</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:endEvent id="Event_1fpqzg4" name="document treated">
+      <bpmn:extensionElements>
+        <zeebe:ioMapping>
+          <zeebe:output source="=&#34;TRAITE_NON_GED&#34;" target="status" />
+        </zeebe:ioMapping>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0af8n6a</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_03aekpc" name="yes" sourceRef="Gateway_100yp67" targetRef="Gateway_0as4reb">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=documentAccepted="true"</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_1gkyk1a" name="no" sourceRef="Gateway_100yp67" targetRef="Activity_0xc4jnu">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=documentAccepted="false"</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_1ds01f5" sourceRef="Activity_0xc4jnu" targetRef="Event_0zc5r7d" />
+    <bpmn:sequenceFlow id="Flow_1q5scwv" name="non" sourceRef="Gateway_0as4reb" targetRef="Activity_0kw3q1v">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=storeGed="false"</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_0af8n6a" sourceRef="Activity_0kw3q1v" targetRef="Event_1fpqzg4" />
+    <bpmn:sequenceFlow id="Flow_17w2olw" name="yes" sourceRef="Gateway_0as4reb" targetRef="Activity_0889zwr">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=storeGed="true"</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_0dzjqk5" sourceRef="Activity_0889zwr" targetRef="Activity_0k7q9gg" />
+    <bpmn:sequenceFlow id="Flow_1ef4d41" sourceRef="Activity_0k7q9gg" targetRef="Event_1yzuh3c" />
+    <bpmn:userTask id="Activity_0htz0fy" name="validate document">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:UserTaskForm_1d2u5bk" />
+        <zeebe:ioMapping>
+          <zeebe:output source="=documentAccepted" target="documentAccepted" />
+          <zeebe:output source="=documentType" target="documentType" />
+          <zeebe:output source="=status" target="status" />
+          <zeebe:output source="=storeGed" target="storeGed" />
+          <zeebe:output source="=name" target="name" />
+        </zeebe:ioMapping>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1u8glf1</bpmn:incoming>
+      <bpmn:outgoing>Flow_03nendz</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_1u8glf1" name="yes" sourceRef="Gateway_13ogzsu" targetRef="Activity_0htz0fy">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">= validated = "yes"</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_03nendz" sourceRef="Activity_0htz0fy" targetRef="Gateway_100yp67" />
+    <bpmn:exclusiveGateway id="Gateway_13ogzsu" name="validated by OMC?">
+      <bpmn:extensionElements />
+      <bpmn:incoming>Flow_1ya2t4t</bpmn:incoming>
+      <bpmn:outgoing>Flow_17mips3</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1u8glf1</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:userTask id="Activity_10ysvjt" name="read document">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:userTaskForm_1h5ee8r" />
+        <zeebe:ioMapping>
+          <zeebe:output source="=&#34;A_TRAITE&#34;" target="status" />
+          <zeebe:output source="=name" target="name" />
+          <zeebe:output source="=documentType" target="documentType" />
+          <zeebe:output source="=validated" target="validated" />
+        </zeebe:ioMapping>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0uwoxkx</bpmn:incoming>
+      <bpmn:outgoing>Flow_1ya2t4t</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="Activity_0xc4jnu" name="send mail to agent BR">
+      <bpmn:extensionElements>
+        <zeebe:ioMapping>
+          <zeebe:output source="=&#34;REJETE&#34;" target="status" />
+          <zeebe:output source="=name" target="name" />
+        </zeebe:ioMapping>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:userTaskForm_3mqff8s" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1gkyk1a</bpmn:incoming>
+      <bpmn:outgoing>Flow_1ds01f5</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="Activity_0kw3q1v" name="send mail to agent BR">
+      <bpmn:extensionElements>
+        <zeebe:ioMapping>
+          <zeebe:output source="=&#34;TRAITE_NON_GED&#34;" target="status" />
+        </zeebe:ioMapping>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:userTaskForm_0n6hg84" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1q5scwv</bpmn:incoming>
+      <bpmn:outgoing>Flow_0af8n6a</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="Activity_0k7q9gg" name="send mail to agent BR">
+      <bpmn:extensionElements>
+        <zeebe:ioMapping>
+          <zeebe:output source="=status" target="status" />
+        </zeebe:ioMapping>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:userTaskForm_11f0jm6" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0dzjqk5</bpmn:incoming>
+      <bpmn:outgoing>Flow_1ef4d41</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="Activity_0889zwr" name="store in GED">
+      <bpmn:extensionElements>
+        <zeebe:ioMapping>
+          <zeebe:output source="=&#34;TRAITE_GED&#34;" target="status" />
+        </zeebe:ioMapping>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:userTaskForm_1ireren" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_17w2olw</bpmn:incoming>
+      <bpmn:outgoing>Flow_0dzjqk5</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_1cahemv" sourceRef="Activity_0a2ad76" targetRef="Gateway_100yp67" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_0vn8alx">
+      <bpmndi:BPMNShape id="Participant_1yx3rnz_di" bpmnElement="Participant_1yx3rnz" isHorizontal="true">
+        <dc:Bounds x="160" y="80" width="1380" height="790" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_007q12x_di" bpmnElement="Lane_007q12x" isHorizontal="true">
+        <dc:Bounds x="190" y="450" width="1350" height="420" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_0783trx_di" bpmnElement="Lane_0783trx" isHorizontal="true">
+        <dc:Bounds x="190" y="80" width="1350" height="370" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="222" y="249" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="216" y="292" width="50" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1k7ybxp_di" bpmnElement="Activity_0a2ad76">
+        <dc:Bounds x="730" y="227" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_1wd2qv2" bpmnElement="Gateway_100yp67" isMarkerVisible="true">
+        <dc:Bounds x="865" y="515" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="824" y="489" width="51" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_1pe7dc4" bpmnElement="Event_0zc5r7d">
+        <dc:Bounds x="962" y="625" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="955" y="668" width="50" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_1tj0zcx" bpmnElement="Gateway_0as4reb" isMarkerVisible="true">
+        <dc:Bounds x="1055" y="515" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1037" y="478" width="87" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_1nwgwpm" bpmnElement="Event_1yzuh3c">
+        <dc:Bounds x="1442" y="522" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1430" y="565" width="61" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_07jrlft" bpmnElement="Event_1fpqzg4">
+        <dc:Bounds x="1242" y="625" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1217" y="668" width="86" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_0jfufas" bpmnElement="Activity_0htz0fy">
+        <dc:Bounds x="620" y="500" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_13ogzsu_di" bpmnElement="Gateway_13ogzsu" isMarkerVisible="true">
+        <dc:Bounds x="629" y="242" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="624" y="205" width="59" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0tfc912_di" bpmnElement="Activity_10ysvjt">
+        <dc:Bounds x="400" y="227" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_083840g_di" bpmnElement="Activity_0xc4jnu">
+        <dc:Bounds x="840" y="603" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1kwamq6_di" bpmnElement="Activity_0kw3q1v">
+        <dc:Bounds x="1030" y="603" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1cy35xp_di" bpmnElement="Activity_0k7q9gg">
+        <dc:Bounds x="1290" y="500" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1sf6mpg_di" bpmnElement="Activity_0889zwr">
+        <dc:Bounds x="1160" y="500" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_0uwoxkx_di" bpmnElement="Flow_0uwoxkx">
+        <di:waypoint x="258" y="267" />
+        <di:waypoint x="400" y="267" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1ya2t4t_di" bpmnElement="Flow_1ya2t4t">
+        <di:waypoint x="500" y="267" />
+        <di:waypoint x="629" y="267" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_17mips3_di" bpmnElement="Flow_17mips3">
+        <di:waypoint x="679" y="267" />
+        <di:waypoint x="730" y="267" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="707" y="249" width="13" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_0xww4q1" bpmnElement="Flow_03aekpc">
+        <di:waypoint x="915" y="540" />
+        <di:waypoint x="1055" y="540" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="977" y="522" width="17" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_1cbi6fy" bpmnElement="Flow_1gkyk1a">
+        <di:waypoint x="890" y="565" />
+        <di:waypoint x="890" y="603" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="899" y="581" width="13" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_13agqe0" bpmnElement="Flow_1ds01f5">
+        <di:waypoint x="940" y="643" />
+        <di:waypoint x="962" y="643" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_12atj5y" bpmnElement="Flow_1q5scwv">
+        <di:waypoint x="1080" y="565" />
+        <di:waypoint x="1080" y="603" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1086" y="581" width="19" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_1w4gz4f" bpmnElement="Flow_0af8n6a">
+        <di:waypoint x="1130" y="643" />
+        <di:waypoint x="1242" y="643" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_0pkrgx3" bpmnElement="Flow_17w2olw">
+        <di:waypoint x="1105" y="540" />
+        <di:waypoint x="1160" y="540" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1124" y="522" width="17" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_04swojp" bpmnElement="Flow_0dzjqk5">
+        <di:waypoint x="1260" y="540" />
+        <di:waypoint x="1290" y="540" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_1dhlstj" bpmnElement="Flow_1ef4d41">
+        <di:waypoint x="1390" y="540" />
+        <di:waypoint x="1442" y="540" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1u8glf1_di" bpmnElement="Flow_1u8glf1">
+        <di:waypoint x="654" y="292" />
+        <di:waypoint x="654" y="500" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="661" y="393" width="17" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_03nendz_di" bpmnElement="Flow_03nendz">
+        <di:waypoint x="720" y="540" />
+        <di:waypoint x="865" y="540" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1cahemv_di" bpmnElement="Flow_1cahemv">
+        <di:waypoint x="830" y="267" />
+        <di:waypoint x="890" y="267" />
+        <di:waypoint x="890" y="515" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
